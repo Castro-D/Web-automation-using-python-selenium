@@ -33,6 +33,7 @@ class UniverTest(unittest.TestCase):
         inicio_page = Inicio(driver)
         inicio_page.click_egresados()
         inicio_page.click_tramite()
+        print(inicio_page.get_estado_actual())
         # if assert fails, that means my diploma was legalized
         self.assertEqual(inicio_page.get_estado_actual(), 'Legalización Ministerio')
 
